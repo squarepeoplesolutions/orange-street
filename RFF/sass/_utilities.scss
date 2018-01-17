@@ -1,0 +1,45 @@
+.indent-top {
+	@media(min-width: 768px){
+        padding-top: 2rem;
+        margin-top: -10rem;
+    }
+
+    & > .container {
+    	background: #fff;
+    	@media(min-width: 768px){
+            padding-top: 2rem;
+        }
+    }
+}
+
+.indent-bottom {
+    position: relative;
+
+    & > .container {
+	    position: relative;
+	    top: 5rem;
+	    background: #fff;
+	    height: 5rem;
+    }
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.section {
+    padding: 2rem 0;
+}
+
+.call-out {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.meta {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+

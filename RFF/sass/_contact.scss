@@ -1,0 +1,49 @@
+.contact {
+
+	h2 {
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+
+	.social {
+		margin: 8rem auto 8rem;
+	}
+
+	form {
+		width: 100%;
+		max-width: 500px;
+		display: block;
+		margin: 0 auto;
+
+		&.contactform {
+			// text-align: center;
+
+			input {
+				width: 100%;
+				max-width: 500px;
+
+				&[type="submit"]{
+					width: auto;
+					margin: 4rem auto 2rem auto;
+					display: block;
+				}
+			}
+
+			textarea {
+				width: 100%;
+				max-width: 500px;
+				min-height: 100px;
+
+				@media(min-width: 768px){
+					min-height: 200px;
+				}
+			}
+		}
+	}
+}
+
+.form_message {
+	font-weight: bold;
+	color: red;
+	text-align: center;
+}

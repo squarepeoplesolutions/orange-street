@@ -1,0 +1,50 @@
+
+.hero {
+    height:  45vh;
+    position: relative;
+    
+    @media(min-width: $tablet){
+        height:  50vh;
+    }
+
+    @media(min-width: $desktop){
+        height:  75vh;
+    }
+
+    .hero-inner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        height: 100%;
+
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        #ios-play-btn {
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+            left: 0;
+            right: 0;
+            top: 50%;
+            bottom: auto;
+            margin: auto;
+            width: 72px;
+            height: 72px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;  
+        }
+    }
+}

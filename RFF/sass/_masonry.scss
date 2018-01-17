@@ -1,0 +1,180 @@
+.grid {
+    .row {
+
+        display: flex;
+        flex-wrap: wrap;
+
+        .grid-item {
+            box-sizing: border-box;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 300px;
+            max-width: 100%;
+            margin: auto;
+
+            @media(min-width: 600px){
+                width: 50%;
+            }
+        }
+
+        .grid-tall {
+
+            width: 100%;
+
+            @media(min-width: 900px){
+                width: 30%;
+            }
+
+            .grid-item {
+                width: 100%;
+                @media(min-width: 900px){
+                    height: 350px;
+                }
+
+                @media(min-width: $desktop){
+                    height: 500px;
+                }
+
+
+                &:nth-child(2){
+                    @media(min-width: 900px){
+                        height: 150px;
+                    }
+
+                    @media(min-width: $desktop){
+                        height: 300px;
+                    }
+                }
+            }
+        }
+
+        .grid-wide {
+
+            width: 100%;
+
+            @media(min-width: 900px){
+                width: 70%;
+            }
+
+            display: flex;
+            flex-wrap: wrap;
+
+            .grid-item {
+                @media(min-width: 900px){
+                    width: 50%;
+                    height: 200px;
+                }
+
+                @media(min-width: $desktop){
+                    height: 300px;
+                }
+
+                &:nth-child(3) {
+
+                    width: 100%;
+
+                    @media(min-width: 900px){
+                        width: 100%;
+                        height: 300px;
+                    }
+
+                    @media(min-width: $desktop){
+                        height: 500px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+.grid:after {
+  	content: '';
+  	display: block;
+  	clear: both;
+}
+
+.grid-item {
+
+
+    img {
+        opacity: 0;
+    }
+
+    .inner {
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        top:0;
+        left:0;
+        right: 0;
+        bottom: 0;
+        margin: 3px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+        box-sizing: border-box;
+        max-width: 100%;
+
+        .inner-inner {
+
+            background-color: rgba(0,0,0,0.5);
+            width: 100%;
+            height: 100%;
+            top:0;
+            left:0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .button {
+                color: #fff;
+                border-color: #fff;
+                display: block;
+                text-align: center;
+                width: 90px;
+                transition: all 0.5s ease-out;
+                line-height: 28px;
+                height: 28px;
+
+
+                @media(min-width: $desktop){
+                    width: 100px;
+                    line-height: 38px;
+                    height: 38px;
+                }
+
+                &:hover {
+                    color: #000;
+                    background-color: #fff;
+                }
+            }
+
+            p {
+                color: #fff;
+                // margin-top: 10px;
+                max-width: 80%;
+                margin: 0;
+            }
+        }
+    }
+
+    &:hover {
+        .inner {
+            top:0;
+        }
+    }
+
+  	img {
+  		display: block;
+  		max-width: 100%;
+  	}
+}

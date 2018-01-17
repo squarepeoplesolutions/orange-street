@@ -1,0 +1,55 @@
+.services {
+    padding-top: 2rem;
+
+    .container {
+    	background-color: #fff;
+    	
+        @media(min-width:768px){
+            padding: 2rem 4rem;
+        }
+
+    	h2 {
+    		text-align: center;
+    		margin-bottom: 0rem;
+    		margin-top: 2rem;
+    		text-transform: uppercase;
+    	}
+
+    	img {
+    		padding: 1rem 0rem;
+            opacity: 0;
+    	}
+
+        .columns {
+
+            position: relative;
+            background-size: cover;
+            margin-bottom: 4rem;
+
+            .post-meta {
+                position: absolute;
+                left: 0px;
+                bottom: 50px;
+                background-color: $dark-grey;
+                color: $white;
+                padding: 1rem;
+
+                h3 {
+                    margin: 0;
+                    text-transform: uppercase;
+                    font-size: 1.4rem;
+                }
+
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    font-size: 1.2rem;
+                }
+            }
+
+            a {
+
+            }
+        }
+    }
+}
