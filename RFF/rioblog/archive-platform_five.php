@@ -20,134 +20,177 @@ get_header(); ?>
 	                <div class="grid">
 	                    <?php
 	                    	$i = 1;
+	                    	if(have_posts()){
+                    			$count_posts = wp_count_posts('platform_five');
+								$remaining_posts = $count_posts->publish;
+								$overflow_posts = $remaining_posts % 5;
+								// echo '<p>'.$overflow_posts.'</p>';
+                    		}
 	                    	echo '
 	                    		<div class="row">';
+
                     				while ( have_posts() ) : the_post();
-                    					// $thumburl = the_post_thumbnail_url();
                     					$thumburl = get_the_post_thumbnail_url();
 
-                    					if($i == 1){
+                    					if($remaining_posts == $overflow_posts){
+                    						echo '</div>';
                     						echo '
-                    							<div class="grid-tall">
-	                    							<div class="grid-item">
-				                    					<div class="inner" style="background-image: url('.$thumburl.');">
-				                    						<div class="inner-inner">
-				                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
-								                                <p>'.esc_html( get_the_title() ).'</p>
-				                    						</div>
-				                    					</div>
-				                    				</div>
-                    						';
-                    					}else if($i == 2){
+                    							<div class="grid-item end-item">
+			                    					<div class="inner" style="background-image: url('.$thumburl.');">
+			                    						<div class="inner-inner">
+			                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
+							                                <p>'.esc_html( get_the_title() ).'</p>
+			                    						</div>
+			                    					</div>
+			                    				</div>
+			                    			';
+                    					}else if($remaining_posts == 1){
+                    						// echo '<p>last overflows</p>';
                     						echo '
-	                    							<div class="grid-item">
-				                    					<div class="inner" style="background-image: url('.$thumburl.');">
-				                    						<div class="inner-inner">
-				                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
-								                                <p>'.esc_html( get_the_title() ).'</p>
-				                    						</div>
-				                    					</div>
-				                    				</div>
-				                    			</div>
-                    						';
-                    					}else if($i == 3){
+                    							<div class="grid-item end-item">
+			                    					<div class="inner" style="background-image: url('.$thumburl.');">
+			                    						<div class="inner-inner">
+			                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
+							                                <p>'.esc_html( get_the_title() ).'</p>
+			                    						</div>
+			                    					</div>
+			                    				</div>
+			                    			';
+			                    			echo '</div>';
+                    					}else if($remaining_posts < $overflow_posts){
                     						echo '
-                    							<div class="grid-wide">
-                    								<div class="grid-item">
-				                    					<div class="inner" style="background-image: url('.$thumburl.');">
-				                    						<div class="inner-inner">
-				                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
-								                                <p>'.esc_html( get_the_title() ).'</p>
-				                    						</div>
-				                    					</div>
-				                    				</div>
-                    						';
-                    					}else if($i == 4){
-                    						echo '
-	                    							<div class="grid-item">
-				                    					<div class="inner" style="background-image: url('.$thumburl.');">
-				                    						<div class="inner-inner">
-				                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
-								                                <p>'.esc_html( get_the_title() ).'</p>
-				                    						</div>
-				                    					</div>
-				                    				</div>
-                    						';
-                    					}else if($i == 5){
-                    						echo '
-                    								<div class="grid-item">
-				                    					<div class="inner" style="background-image: url('.$thumburl.');">
-				                    						<div class="inner-inner">
-				                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
-								                                <p>'.esc_html( get_the_title() ).'</p>
-				                    						</div>
-				                    					</div>
-				                    				</div>
-				                    			</div>
-				                </div>
-                    						';
-                    					}else if ($i == 6){
-                    						echo '
-        						<div class="row">
-        										<div class="grid-wide">
-                    								<div class="grid-item">
-				                    					<div class="inner" style="background-image: url('.$thumburl.');">
-				                    						<div class="inner-inner">
-				                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
-								                                <p>'.esc_html( get_the_title() ).'</p>
-				                    						</div>
-				                    					</div>
-				                    				</div>
-                    						';
-                    					}else if($i == 7){
-                    						echo '
-	                    							<div class="grid-item">
-				                    					<div class="inner" style="background-image: url('.$thumburl.');">
-				                    						<div class="inner-inner">
-				                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
-								                                <p>'.esc_html( get_the_title() ).'</p>
-				                    						</div>
-				                    					</div>
-				                    				</div>
-                    						';
-                    					}else if($i == 8){
-                    						echo '
-                    								<div class="grid-item">
-				                    					<div class="inner" style="background-image: url('.$thumburl.');">
-				                    						<div class="inner-inner">
-				                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
-								                                <p>'.esc_html( get_the_title() ).'</p>
-				                    						</div>
-				                    					</div>
-				                    				</div>
-				                    			</div>
-                    						';
-                    					}if($i == 9){
-                    						echo '
-                    							<div class="grid-tall">
-	                    							<div class="grid-item">
-				                    					<div class="inner" style="background-image: url('.$thumburl.');">
-				                    						<div class="inner-inner">
-				                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
-								                                <p>'.esc_html( get_the_title() ).'</p>
-				                    						</div>
-				                    					</div>
-				                    				</div>
-                    						';
-                    					}else if($i == 10){
-                    						echo '
-	                    							<div class="grid-item">
-				                    					<div class="inner" style="background-image: url('.$thumburl.');">
-				                    						<div class="inner-inner">
-				                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
-								                                <p>'.esc_html( get_the_title() ).'</p>
-				                    						</div>
-				                    					</div>
-				                    				</div>
-				                    			</div>
-                    						';
+                    							<div class="grid-item end-item">
+			                    					<div class="inner" style="background-image: url('.$thumburl.');">
+			                    						<div class="inner-inner">
+			                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
+							                                <p>'.esc_html( get_the_title() ).'</p>
+			                    						</div>
+			                    					</div>
+			                    				</div>
+			                    			';
+                    					}else {
+                    						if($i == 1){
+	                    						echo '
+	                    							<div class="grid-tall">
+		                    							<div class="grid-item">
+					                    					<div class="inner" style="background-image: url('.$thumburl.');">
+					                    						<div class="inner-inner">
+					                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
+									                                <p>'.esc_html( get_the_title() ).'</p>
+					                    						</div>
+					                    					</div>
+					                    				</div>
+	                    						';
+	                    					}else if($i == 2){
+	                    						echo '
+		                    							<div class="grid-item">
+					                    					<div class="inner" style="background-image: url('.$thumburl.');">
+					                    						<div class="inner-inner">
+					                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
+									                                <p>'.esc_html( get_the_title() ).'</p>
+					                    						</div>
+					                    					</div>
+					                    				</div>
+					                    			</div>
+	                    						';
+	                    					}else if($i == 3){
+	                    						echo '
+	                    							<div class="grid-wide">
+	                    								<div class="grid-item">
+					                    					<div class="inner" style="background-image: url('.$thumburl.');">
+					                    						<div class="inner-inner">
+					                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
+									                                <p>'.esc_html( get_the_title() ).'</p>
+					                    						</div>
+					                    					</div>
+					                    				</div>
+	                    						';
+	                    					}else if($i == 4){
+	                    						echo '
+		                    							<div class="grid-item">
+					                    					<div class="inner" style="background-image: url('.$thumburl.');">
+					                    						<div class="inner-inner">
+					                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
+									                                <p>'.esc_html( get_the_title() ).'</p>
+					                    						</div>
+					                    					</div>
+					                    				</div>
+	                    						';
+	                    					}else if($i == 5){
+	                    						echo '
+	                    								<div class="grid-item">
+					                    					<div class="inner" style="background-image: url('.$thumburl.');">
+					                    						<div class="inner-inner">
+					                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
+									                                <p>'.esc_html( get_the_title() ).'</p>
+					                    						</div>
+					                    					</div>
+					                    				</div>
+					                    			</div>
+					                </div>
+	                    						';
+	                    					}else if ($i == 6){
+	                    						echo '
+	        						<div class="row">
+	        										<div class="grid-wide">
+	                    								<div class="grid-item">
+					                    					<div class="inner" style="background-image: url('.$thumburl.');">
+					                    						<div class="inner-inner">
+					                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
+									                                <p>'.esc_html( get_the_title() ).'</p>
+					                    						</div>
+					                    					</div>
+					                    				</div>
+	                    						';
+	                    					}else if($i == 7){
+	                    						echo '
+		                    							<div class="grid-item">
+					                    					<div class="inner" style="background-image: url('.$thumburl.');">
+					                    						<div class="inner-inner">
+					                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
+									                                <p>'.esc_html( get_the_title() ).'</p>
+					                    						</div>
+					                    					</div>
+					                    				</div>
+	                    						';
+	                    					}else if($i == 8){
+	                    						echo '
+	                    								<div class="grid-item">
+					                    					<div class="inner" style="background-image: url('.$thumburl.');">
+					                    						<div class="inner-inner">
+					                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
+									                                <p>'.esc_html( get_the_title() ).'</p>
+					                    						</div>
+					                    					</div>
+					                    				</div>
+					                    			</div>
+	                    						';
+	                    					}if($i == 9){
+	                    						echo '
+	                    							<div class="grid-tall">
+		                    							<div class="grid-item">
+					                    					<div class="inner" style="background-image: url('.$thumburl.');">
+					                    						<div class="inner-inner">
+					                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
+									                                <p>'.esc_html( get_the_title() ).'</p>
+					                    						</div>
+					                    					</div>
+					                    				</div>
+	                    						';
+	                    					}else if($i == 10){
+	                    						echo '
+		                    							<div class="grid-item">
+					                    					<div class="inner" style="background-image: url('.$thumburl.');">
+					                    						<div class="inner-inner">
+					                    							<a class="button" href="'. esc_url( get_permalink() ).'">Play</a>
+									                                <p>'.esc_html( get_the_title() ).'</p>
+					                    						</div>
+					                    					</div>
+					                    				</div>
+					                    			</div>
+	                    						';
+	                    					}
                     					}
-
 
                     				if($i == 10){
                     					$i = 1;
@@ -155,20 +198,14 @@ get_header(); ?>
                     					$i++;
                     				}
 
+                    				$remaining_posts--;
+
                     				endwhile;
 
                     				echo '
                     			</div>
-                    				';
+                    		';
 						?>
-									<!-- <div class="" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
-				                        <div class="inner">
-				                            <div class="inner-inner">
-				                                <a class="button" href="<?php echo  esc_url( get_permalink() ); ?>">Play</a>
-				                                <p><?php the_title( '<p>','</p>' ); ?></p>
-				                            </div>
-				                        </div>
-				                    </div> -->
 	                </div>
 	            </div>
 	        </section>

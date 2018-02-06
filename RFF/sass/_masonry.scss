@@ -102,6 +102,15 @@
 
 .grid-item {
 
+    &.end-item {
+        position: relative;
+        width: 100%;
+        float: left;
+        height: 300px;
+        @media(min-width: 600px){
+            width: 50%;
+        }
+    }
 
     img {
         opacity: 0;

@@ -419,6 +419,15 @@ header {
   display: block;
   clear: both; }
 
+.grid-item.end-item {
+  position: relative;
+  width: 100%;
+  float: left;
+  height: 300px; }
+  @media (min-width: 600px) {
+    .grid-item.end-item {
+      width: 50%; } }
+
 .grid-item img {
   opacity: 0; }
 
