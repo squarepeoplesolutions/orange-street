@@ -1,0 +1,140 @@
+.posts {
+	padding: 0 20px;
+
+	@media(min-width: $desktop){
+		padding: 0;
+	}
+
+	.columns {
+		padding-bottom: 4rem;
+		margin-bottom: 6rem;
+		display: block;
+		transition: all 0.5s ease-in-out;
+		position: relative;
+
+		@media(min-width: $tablet){
+		    width: 100%;
+		    margin: 0;
+		}
+
+		@media(min-width: $desktop){
+		    width: 30.6666666667%;
+		    margin-left: 4%;
+		    margin-bottom: 6rem;
+
+		    &:first-child {
+		    	margin-left: 0;
+		    }
+		}
+
+		&:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            bottom: 30px;
+            width: 80px;
+            height: 2px;
+            background-color: #d0bb3a;
+        }
+
+		&:hover {
+			background-color: #000;
+			color: #fff;
+
+			&:after, .category:after {
+				background-color: $blue;
+			}
+		}
+
+		&.four {
+			@media(min-width: $desktop){
+				width: 32.56%;
+				margin-left: 1.16%;
+
+				&:first-child {
+					margin:0;
+				}
+			}
+		}
+
+		p {
+			text-align: center;
+
+			&.category {
+
+				position: relative;
+                margin-bottom: 5rem;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    bottom: -15px;
+                    width: 80px;
+                    height: 2px;
+                    background-color: #d0bb3a;
+                }
+			}
+
+			span {
+				margin: 0 2rem;
+			}
+
+			&.title {
+				font-size: 2rem;
+				margin: 3rem auto;
+				position: relative;
+
+				&:after {
+                    // content: "";
+                    // position: absolute;
+                    // left: 0;
+                    // right: 0;
+                    // margin: 10px auto;
+                    // bottom: -25px;
+                    // width: 5px;
+                    // height: 5px;
+                    // background-color: #d0bb3a;
+                    // border-radius: 50%;
+                }
+			}
+
+			&.meta {
+				font-size: 1.3rem;
+				margin-bottom: 2rem;
+			}
+		}
+
+		.image {
+			height:50vw;
+			overflow: hidden;
+			margin-bottom: 4rem;
+
+			@media(min-width: $desktop){
+				height: 22vw;
+			}
+
+			img {
+				display: block;
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+
+	hr {
+        left: 0;
+        right: 0;
+        margin: 5rem auto 2rem auto;
+        width: 50%;
+        height: 1px;
+        background-color: #d0bb3a;
+        border: 0;
+	}
+}

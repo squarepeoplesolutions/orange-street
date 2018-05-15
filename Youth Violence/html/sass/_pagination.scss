@@ -1,0 +1,45 @@
+.pagination {
+
+	overflow: hidden;
+
+	a {
+		width: 100%;
+		display: block;
+		background-color: $blue;
+		padding: 1.5rem 0;
+		color: #fff;
+		font-size: 2rem;
+		text-decoration: none;
+		transition: all 0.5s ease-in-out;
+
+		&:hover {
+			background-color: #3a3939;
+			color: #ccc;
+		}
+
+		@media(min-width: $tablet){
+			width: 50%;
+			float: left;
+
+			&:first-child {
+				border-right: 2px solid #fff;
+			}
+		}
+	}
+
+	.page-numbers {
+		display: none;
+	}
+
+	.prev {
+		display: block;
+		float: left;
+		text-align: center;
+	}
+
+	.next {
+		display: block;
+		float: right;
+		text-align: center;
+	}
+}

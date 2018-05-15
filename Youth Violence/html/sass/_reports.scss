@@ -1,0 +1,44 @@
+.reports {
+
+	a {
+		img {
+			transition: all 0.3s ease-in-out;
+			margin-bottom: 2rem;
+			border: 5px solid $blue;
+		}
+
+		&:hover {
+			img {
+				border-color: #000;
+				transform: scale(1.015);
+			}
+		}
+	}
+
+	p {
+		margin-bottom: 1rem;
+		text-transform: uppercase;
+		font-size: 1.4rem;
+
+		&.date {
+			margin-bottom: 4rem;
+		}
+	}
+}
+
+#nf-form-2-cont {
+	text-align: center;
+	.nf-fu-progress {
+		background-color: #fff;
+		-webkit-box-shadow: none;
+		box-shadow: none
+	}
+
+	.nf-response-msg {
+		margin-bottom: 4rem;
+	}
+
+	#nf-field-6 {
+		margin-bottom: 4rem;
+	}
+}

@@ -1,0 +1,23 @@
+.gallery {
+	margin-top: 3rem;
+	.row {
+		.columns {
+			overflow: hidden;
+			margin-bottom: 3rem;
+
+			.inner {
+				overflow: hidden;
+				margin-bottom: 2rem;
+			}
+
+			img {
+				transition: all 0.3s ease-in-out;
+				display: block;
+
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+.gallery {
+  margin-top: 3rem; }
+  .gallery .row .columns {
+    overflow: hidden;
+    margin-bottom: 3rem; }
+    .gallery .row .columns img {
+      transition: all 0.3s ease-in-out;
+      display: block; }
+      .gallery .row .columns img:hover {
+        transform: scale(1.1); }
