@@ -13,11 +13,11 @@ var browserSync = require('browser-sync').create();
 
 
 //script paths
-var jsFiles = ['./js/jquery-3.1.1.min.js', './js/masonry.js',  './js/imagesloaded.js', './js/main.js'],  
+var jsFiles = ['./js/jquery-3.1.1.min.js', './js/masonry.js',  './js/imagesloaded.js', './js/main.js'],
     jsDest = './build/';
 
 //style paths
-var cssFiles = ['./css/normalize.css', './css/skeleton.css', './css/style.css'],  
+var cssFiles = ['./css/normalize.css', './css/skeleton.css', './css/style.css'],
     cssDest = './build/';
 
 // JS hint task
@@ -109,6 +109,3 @@ gulp.task('default', ['htmlpage', 'sass', 'styles', 'minifyJS', 'serve'], functi
   });
 
 });
-
-
-

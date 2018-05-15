@@ -1,0 +1,17 @@
+{
+  "name": "",
+  "version": "",
+  "description": "Cd to the project folder root and run \"gulp\"",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "gulp": "^3.9.1",
+    "gulp-changed": "latest",
+    "gulp-concat": "latest",
+    "gulp-jshint": "^2.1.0",
+    "gulp-minify-css": "latest",
+    "gulp-minify-html": "latest",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest",
+    "jshint": "^2.9.5"
+  }
+}
