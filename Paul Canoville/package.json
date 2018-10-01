@@ -4,18 +4,18 @@
   "description": "Cd to the project folder root and run \"gulp\"",
   "devDependencies": {
     "browser-sync": "latest",
-    "gulp": "^3.9.1",
+    "gulp": "latest",
     "gulp-changed": "latest",
     "gulp-concat": "latest",
-    "gulp-jshint": "^2.1.0",
+    "gulp-jshint": "latest",
     "gulp-minify-css": "latest",
     "gulp-minify-html": "latest",
     "gulp-sass": "latest",
     "gulp-uglify": "latest",
-    "jshint": "^2.9.5"
+    "jshint": "latest"
   },
   "dependencies": {
-    "install": "^0.12.1",
-    "npm": "^6.4.1"
+    "install": "latest",
+    "npm": "latest"
   }
 }
