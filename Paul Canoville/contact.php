@@ -60,10 +60,7 @@
                 <hr>
                 <br>
                 <br>
-                <p>Gable House<br>
-                239 Regents Park Road<br>
-                London<br>
-                N3 3LF</p>
+                <p>Basing House 46 High Street,<br> Rickmansworth,<br> Herts,<br> WD3 1HP</p>
                 <p><a href="tel:+447522771047" class="underline dark">07522 771047</a></p>
             </div>
         </section>

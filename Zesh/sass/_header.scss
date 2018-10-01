@@ -1,0 +1,99 @@
+header {
+    background-color: rgba(255,255,255,0.5);
+    padding: 0;
+    width: 100vw;
+    z-index: 9;
+    border-bottom: 1px solid $red;
+    text-align: center;
+
+    & > a {
+        img {
+            max-width: 120px;
+            margin: 15px auto 30px auto;
+            display: block;
+        }
+    }
+
+    .menu-toggle {
+        margin: 20px auto;
+        border: 1px solid $blue;
+        border-radius: 10px;
+        padding: 5px;
+        display: inline-block;
+        text-align: center;
+
+        @media(min-width: $desktop){
+            display: none;
+        }
+
+        .inner {
+            width:20px;
+            height: 2px;
+            border-radius: 10px;
+            background-color: $blue;
+            margin: 5px;
+        }
+    }
+
+    nav {
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: max-height 0.3s; 
+        -moz-transition: max-height 0.3s; 
+        -ms-transition: max-height 0.3s; 
+        -o-transition: max-height 0.3s; 
+        transition: max-height 0.3s;
+
+        @media(min-width: $desktop){
+            max-height: none;
+        }
+
+        &.open {
+            max-height: 1800px;
+            -webkit-transition: max-height 0.3s; 
+            -moz-transition: max-height 0.3s; 
+            -ms-transition: max-height 0.3s; 
+            -o-transition: max-height 0.3s; 
+            transition: max-height 0.3s;
+        }
+
+        ul {
+            text-align: center;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: block;
+                margin: 0;
+
+                @media(min-width:740px){
+                    display: inline-block;
+                }
+
+                a {
+                    color:  $blue;
+                    display: block;
+                    text-decoration: none;
+                    padding: 1.5rem 2rem;
+                    margin: 0 1rem;
+                    text-transform: uppercase;
+                    transition: all 0.2s linear;
+                    font-weight: 400;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        color: $blue;
+                        transform: scale(1.2, 1.2);
+                    }
+                }
+
+                &.selected {
+                    a {
+                        color: $blue;
+                        background-color: rgba(0,0,0,0.05);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.hero {
+    height:  40vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(./img/Sidelined.jpg);
+    // margin-bottom: 8rem;
+
+    // .about & {
+    //     background-image: url(./img/Sidelined.jpg);
+    // }
+
+    .captions {
+    	padding-top: 4rem;
+
+    	h1 {
+    		background-color: rgba(0,0,0,0.5);
+    		display: inline-block;
+    		color: #fff;
+    		padding: 2rem;
+    	}
+    }
+}

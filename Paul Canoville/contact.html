@@ -35,8 +35,8 @@
                                 <li><a href="news.html" class="">News &amp; Events</a></li>
                                 <li class="selected"><a href="contact.php" class="">Contact</a></li>
                             </ul>
-                        </nav>  
-                    </div>  
+                        </nav>
+                    </div>
                 </div>
             </div>
         </header>
@@ -47,7 +47,7 @@
                     <h1>Get in touch</h1>
                 </div>
             </div>
-        </div> 
+        </div>
         <!-- HEADER END -->
         <section>
             <div class="container callout large-padding text-center">
@@ -60,14 +60,11 @@
                 <hr>
                 <br>
                 <br>
-                <p>Gable House<br>
-                239 Regents Park Road<br>
-                London<br>
-                N3 3LF</p>
+                <p>Basing House 46 High Street,<br> Rickmansworth,<br> Herts,<br> WD3 1HP</p>
                 <p><a href="tel:+447522771047" class="underline dark">07522 771047</a></p>
             </div>
         </section>
-        
+
         <section class="blue-panel text-center large-padding contact">
             <div class="container">
                 <p>Fill in the form and we'll get back to you asap!</p>
@@ -94,7 +91,7 @@
                         <input type="submit" value="Send email"/>
                         </form>
                         <?php
-                        } 
+                        }
                     else                /* send the submitted data */
                         {
                         $name=$_REQUEST['name'];
@@ -104,13 +101,13 @@
                             {
                             echo "All fields are required, please fill <a href=\"\">the form</a> again.";
                             }
-                        else{       
+                        else{
                             $from="From: $name<$email>\r\nReturn-path: $email";
                             $subject="Message sent using your contact form";
                             mail("squarepeoplesolutions@gmail.com", $subject, $message, $from);
                             echo "Email sent!";
                             }
-                        }  
+                        }
                     ?>
             </div>
         </section>

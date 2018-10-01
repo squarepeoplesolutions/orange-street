@@ -1,0 +1,19 @@
+footer {
+    padding:  3rem 0;
+    text-align: center;
+    background-color: $blue;
+    padding:  3rem 0;
+    width: 100%;
+    z-index: 9;
+    color:  #fff;
+    
+    p {
+    	text-align: center;
+        font-size:  1.3rem;
+        margin: 0;
+
+        a {
+            color: #fff;
+        }
+    }
+}

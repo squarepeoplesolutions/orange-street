@@ -1,0 +1,19 @@
+.alpha-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+
+    .inner {
+    	background-color: rgba(0,0,0,0.7);
+    	padding: 10rem 0;
+    	color: #fff;
+
+    	blockquote {
+    		max-width: 600px;
+    		margin: 0 auto;
+    		font-size: 1.8rem;
+            font-style: italic;
+    	}
+    }
+}

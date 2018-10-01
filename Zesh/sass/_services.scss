@@ -1,0 +1,75 @@
+.services {
+    @media(min-width: $desktop){
+        padding-top: 2rem;
+        margin-top: 0;
+    }
+
+    .container {
+    	background-color: #fff;
+    	padding: 2rem 4rem;
+        text-align: center;
+
+    	h2 {
+    		text-align: center;
+    		margin-bottom: 5rem;
+    		margin-top: 2rem;
+    		text-transform: uppercase;
+            position: relative;
+    	}
+
+    	img {
+    		padding: 1rem 0rem;
+    	}
+
+        .columns {
+            position: relative;
+            margin-bottom: 30px;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            border-radius: 5px;
+
+            &:before {
+                content: "";
+                display: block;
+                padding-top: 100%;  /* ratio of 1:1*/
+            }
+
+            .inner {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: block;
+                background-color: rgba(19, 85, 141, 0.72);
+                z-index: 1;
+                -webkit-transition: all 500ms ease-out;
+                -moz-transition: all 500ms ease-out;
+                -o-transition: all 500ms ease-out;
+                transition: all 500ms ease-out;
+                text-align: center;
+                color: #fff;
+                line-height: 100%;
+                padding-top: 45%;
+                cursor: pointer;
+                cursor: hand;
+                text-decoration: none;
+
+                p {
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+            }
+
+            &:hover, &.active {
+
+                .inner {
+                    top: 0;
+                    text-decoration: none;
+                }        
+            }
+        }
+    }
+}

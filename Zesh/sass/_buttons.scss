@@ -1,0 +1,46 @@
+.buttons {
+	padding: 5rem 0;
+
+	.button {
+		display: inline-block;
+	    height: 38px;
+	    padding: 0 30px;
+	    color: #555;
+	    text-align: center;
+	    font-size: 11px;
+	    font-weight: 400;
+	    line-height: 38px;
+	    letter-spacing: .1rem;
+	    text-transform: uppercase;
+	    text-decoration: none;
+	    white-space: nowrap;
+	    border-radius: 4px;
+	    border: 1px solid #bbb;
+	    box-sizing: border-box;
+	    position: relative;
+
+	    &:before {
+            content: "";
+            position: absolute;
+            height: 5px;
+            border-bottom: 1px solid $red;
+            border-top: 1px solid $red;
+            top: 40%;
+            width: 50%;
+            right: 100%;
+            margin-right: 15px;
+        } 
+
+        &:after {
+            content: "";
+            position: absolute;
+            height: 5px;
+            border-bottom: 1px solid $red;
+            border-top: 1px solid $red;
+            top: 40%;
+            width: 50%;
+            left: 100%;
+            margin-left: 15px;
+        }
+	}
+}
